@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+}
+
+* {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 14px;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.semibold {
+  font-weight: 600;
+}
+.logo {
+  height: 40px;
+  width: auto;
+  padding: 2px;
+  margin-left: 12px;
+}
+.logo:hover {
+  background-color: #6ef0e6;
+  border-radius: 10px;
+}
+
+.menu-button {
+  height: 36px;
+  width: 36px;
+  margin-right: 12px;
+}
+.menu-button:hover {
+  background-color: #6ef0e6;
+  border-radius: 30px;
+}
+
+nav {
+  background-color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d6edeb;
+}
