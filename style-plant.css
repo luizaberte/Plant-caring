@@ -28,6 +28,16 @@
 .semibold {
   font-weight: 600;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    background-color: var(--content);
+  }
+}
+body {
+  background-color: var(--content);
+}
+
 .logo {
   height: 40px;
   width: auto;
@@ -100,4 +110,101 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--search-background);
+}
+
+.background h1 {
+  margin: 44px 24px;
+  font-style: semibold;
+  font-size: 20px;
+  color: var(--decoration-accept);
+}
+#search {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+#search input {
+  height: 40px;
+  padding-left: 6px;
+  border-radius: 8px 0 0 8px;
+  min-width: 180px;
+  width: 200px;
+  background-color: var(--decoration-accept);
+  border: 1px solid transparent;
+  /*border: 1px solid var(--content);*/
+}
+
+#search input::placeholder {
+  color: var(--content);
+}
+
+#search input:focus {
+  border-right: 1px solid var(--content);
+  background-color: var(--search-background);
+  outline: none;
+}
+
+#search button {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--decoration-accept);
+  border: 1px solid transparent;
+  /*border: 1px solid var(--content);*/
+}
+#search button:hover {
+  background-color: var(--content);
+  color: var(--interaction);
+  border-radius: 8px;
+  cursor: pointer;
+}
+#search button:click {
+  background-color: var(--content);
+  color: var(--interaction);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#plant-filter {
+  display: flex;
+  justify-content: center;
+}
+
+#plant-filter button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 44px;
+  padding-left: 6px;
+  padding-right: 12px;
+  border-radius: 8px;
+  min-width: 180px;
+  width: 250px;
+  background-color: var(--background);
+  border: 1px solid var(--content);
+  color: var(--content);
+  /*border: 1px solid var(--content);*/
+}
+#plant-filter button a {
+  text-decoration: none;
+  color: var(--content);
+  padding-right: 16px;
+}
+#plant-filter button:focus {
+  border-right: 1px solid var(--content);
+  background-color: var(--search-background);
+  outline: none;
+}
+
+#plant-filter button option {
+  display: none;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  width: 768px;
+  height: auto;
 }

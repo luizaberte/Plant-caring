@@ -1,0 +1,15 @@
+:root {
+  --content: #07402a;
+  --interaction: #00ca6e;
+  --search-background: #d6edeb;
+  --background: #ffffff;
+  --content-secondary: #010c44;
+  --decoration-error: #f03f45;
+  --decoration-warm: #fcc034;
+  --decoration-alert: #f88134;
+  --decoration-accept: #cdf1b7;
+}
+
+body {
+  background: var(--background);
+}
