@@ -18,19 +18,64 @@
       rel="stylesheet"
     />
     <title>Document</title>
-    <link rel="stylesheet" href="style-plant.css" />
-    <link rel="stylesheet" href="plant-filter.css" />
+    <link rel="stylesheet" href="../css/style-plant.css" />
+    <link rel="stylesheet" href="../css/plant-filter.css" />
   </head>
   <body>
     <nav>
-      <img src="/images/logo-white.png" class="logo" />
+      <img src="/images/logo-white.png" class="logo" /><a
+        href="../html/index.html"
+      ></a>
       <div class="dropdown">
         <button class="btndrop"><i class="fa-solid fa-bars"></i></button>
         <div class="dropdown-content">
-          <a href="my-garden.html">My garden</a>
+          <a href="../html/my-garden.html">My garden</a>
         </div>
       </div>
       <!--<img src="menu-icon.svg" class="menu-button" />-->
     </nav>
+    <div class="header">
+      <button class="btnBack">
+        <a href="../html/index.html"></a><i class="fa-solid fa-arrow-left"></i>
+      </button>
+    </div>
+
+    <div id="plant-filter">
+      <button type="button">
+        Filter <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+    <form>
+      <div class="multiselect">
+        <div class="selectBox" onclick="showCheckboxes()">
+          <select>
+            <option>Filter</option>
+          </select>
+          <div class="overSelect"></div>
+        </div>
+        <div id="checkboxes">
+          <label for="one"> <input type="checkbox" id="one" /> Poison </label>
+          <label for="two"><input type="checkbox" id="two" /> Edible</label>
+          <label for="three"
+            ><input type="checkbox" id="three" /> Medicinal</label
+          >
+          <label for="four"><input type="checkbox" id="four" /> Fruit</label>
+          <label for="five"><input type="checkbox" id="five" /> Flower</label>
+          <label for="six"><input type="checkbox" id="six" /> Indoor</label>
+        </div>
+      </div>
+    </form>
+
+    <!--<div id="plant-filter">
+        <select>
+          <option value="Filter">Filter</option>
+          <a href="#">My garden</a>
+        </select>
+      </div>-->
+
+    <img src="/images/illustration.svg" />
+
+    <script src="../js/script-plant.js"></script>
   </body>
 </html>
