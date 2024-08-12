@@ -68,3 +68,118 @@ body {
   border-radius: 30px;
   cursor: pointer;
 }
+
+.container {
+  position: relative;
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
+  margin: 24px;
+}
+
+.select-btn {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--background);
+  border: 1px solid var(--content);
+}
+.select-btn .btn-text {
+  color: var(--content);
+}
+.select-btn .arrow {
+  display: flex;
+  width: 20px;
+  color: var(--content);
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.select-btn.open .arrow {
+  transform: rotate(-180deg);
+}
+.select-btn.open ~ .list-items {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+.list-items {
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--background);
+  border: 1px solid var(--content);
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+}
+
+.list-items .items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 44px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 16px;
+  border-radius: 8px;
+}
+.list-items .items:click {
+  background-color: var(--search-background);
+}
+.items .item-text {
+  color: var(--content);
+}
+.items .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 2px solid var(--content);
+  transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox {
+  background-color: var(--interaction);
+  border-color: var(--content);
+}
+.item.checked .check-icon {
+  transform: scale(1);
+}
+.checkbox .check-icon {
+  color: var(--background);
+  font-size: 11px;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
